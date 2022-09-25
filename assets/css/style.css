@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,900&display=swap');
 
 :root {
     --color-body: #FFFFFF;
@@ -13,7 +14,7 @@
     --color-brand: #593D3B;
     --color-side: #D6CCC2;
     --sidbar-width: 150px;
-    --font-base: "Playfair Display";
+    --font-base: "Fraunces";
     --font-body: "Raleway";
 }
 
@@ -24,8 +25,10 @@ body {
 }
 
 .home-header {
-    font-size: 72px;
+    font-size: 84px;
+    font-family: var(--font-base);
     color: #593D3B;
+    /* font-style: italic; */
 }
 
 .resume {
@@ -45,6 +48,10 @@ body {
 h1,h2,h3,h4,h5,h6 {
     color: var(--color-heading);
     font-weight: 700;
+}
+
+.project-header {
+    font-family: var(--font-base);
 }
 
 a {
@@ -97,8 +104,6 @@ img {
     justify-content: center;
     font-size: 48px;
     margin-left: 20px;
-    /* include java symbol / programs used */
-    /* background-color: var(--color-brand); */
     color: var(--color-resume);
 }
 
@@ -108,6 +113,7 @@ img {
 }
 
 .navbar .nav-link {
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
@@ -126,7 +132,6 @@ img {
         min-height: 100vh;
         width: var(--sidbar-width);
         background: var(--color-side);
-        /* add image to backgorund + reduce opacity */
         background-size: cover;
         background-position: center;
     }
@@ -136,6 +141,12 @@ img {
         padding-left: var(--sidbar-width);
     }
 }
+
+@media only screen and (max-width: 991px) {
+    .navbar-collapse {
+      background: var(--color-side);
+    }
+  }
 
 /* BTN */
 /* .btn {
