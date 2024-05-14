@@ -5,14 +5,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,900&display=swap');
 
+/* #2F4454
+#2E151B
+#DA7B93
+#376E6F
+#1C3334 */
+
 :root {
     --color-body: #FFFFFF;
-    --color-resume: #9f897c;
-    --color-heading: #593D3B;
-    --color-base: #F5EBE0;
-    --color-base2: #F5EBE0;
-    --color-brand: #593D3B;
-    --color-side: #D6CCC2;
+    --color-resume: #1C3334;
+    --color-heading: #FFFFFF;
+    --color-base: #376E6F;
+    --color-base2: #376E6F;
+    --color-brand: #ffffff;
+    --color-side: #1C3334;
     --sidbar-width: 150px;
     --font-base: "Fraunces";
     --font-body: "Raleway";
@@ -27,7 +33,7 @@ body {
 .home-header {
     font-size: 84px;
     font-family: var(--font-base);
-    color: #593D3B;
+    color: #ffffff;
     /* font-style: italic; */
 }
 
