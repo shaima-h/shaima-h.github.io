@@ -6,9 +6,9 @@
     <title>Shaima Hussaini</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6cba0fdee.js" crossorigin="anonymous"></script></head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -20,19 +20,20 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links"> home </a>
+                    <a href="#home" class="navbar__links" id="home-page"> home </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links"> about me </a>
+                    <a href="#about" class="navbar__links" id="about-page"> about me </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links"> projects </a>
+                    <a href="#projects" class="navbar__links" id="projects-page"> projects </a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="main">
+    <!-- HOME -->
+    <div class="main" id="home">
         <div class="main__container">
             <div class="main__content">
                 <h1>Hello,</h1>
@@ -40,6 +41,46 @@
             </div>
         </div>
     </div>
+
+    <!-- ABOUT ME -->
+    <div class="main" id="about">
+        <div class="main__container">
+            <div class="main__content">
+                <h2>about me</h2>
+                <h3 class="center">I graduated from the University at Albany in May, 2024 with a B.S. in computer science and a minor in statistics.</h3>
+                <div class="iconbox">
+                    <a href="uploads/Shaima_Hussaini_Resume.pdf"> <i class="fa-solid fa-file-lines"></i></a>
+                    <a href="https://linkedin.com/in/shaimahussaini"> <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/shaima-h"> <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <!-- <div class="main" id="projects">
+        <div class="main__container">
+            <div class="main__content">
+                <h2>projects</h2>
+            </div>
+            <div class="sidebar">
+                <hr>
+                <div class="project">
+                    <h3 class="project__container" data-description="desc1">project name</h3>
+                </div>
+                <hr>
+                <h3 class="project">project name</h3>
+                <hr>
+                <h3 class="project">project name</h3>
+                <hr>
+            </div>
+            <div class="description__content">
+                <div id="desc1" class="description">This is a description of the project and what the project is about. I can have multiple paragraphs with more details about the project.</div>
+                <div id="desc2" class="description">This is a description for project 2. More details about project 2.</div>
+                <div id="desc3" class="description">This is a description for project 3. More details about project 3.</div>
+            </div>
+        </div>
+    </div> -->
     <script src="app.js"></script>
 </body>
 </html>

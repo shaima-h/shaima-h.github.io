@@ -40,7 +40,7 @@ body {
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin: 0 auto;
     padding: 0 50px;
 }
@@ -64,6 +64,7 @@ body {
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
+    font-size: 2rem;
 }
 
 .navbar__links:hover {
@@ -80,6 +81,7 @@ body {
         width: 100%;
         max-width: 1300px;
         padding: 0;
+        top: 0;
     }
 
     .navbar__menu {
@@ -88,7 +90,7 @@ body {
         margin: 0;
         width: 100%;
         position: absolute;
-        top: -1000px;
+        top: 0;
         opacity: 0;
         transition: all 0.5 ease;
         height: 50vh;
@@ -96,13 +98,20 @@ body {
     }
 
     .navbar__menu.active {
-        top: 100%;
+        /* top: 100%; */
+        top: 0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
         height: 50vh;
         font-size: 1.6rem;
         background: var(--color-second-background);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar__toggle {
+        position: relative;
+        z-index: 1000;
     }
 
     .navbar__toggle .bar {
@@ -149,6 +158,27 @@ body {
     }
 }
 
+.iconbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    color: var(--color-main-text);
+}
+
+.iconbox a {
+    color: var(--color-main-text);
+    padding: 10px;
+    font-size: 64px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.iconbox a:hover {
+    color: var(--color-hover-text); /* Optional: Change color on hover */
+}
+
 /* front page */
 .main {
     background-color: var(--color-background);
@@ -176,7 +206,23 @@ body {
     font-size: 8rem;
     color: var(--color-main-text);
     text-align: center;
-    /* font-weight: 700; */
+}
+
+.main__content h2 {
+    font-size: 5rem;
+    color: var(--color-main-text);
+    text-align: left;
+    margin-bottom: 6rem;
+}
+
+.main__content h3 {
+    font-size: 3rem;
+    color: var(--color-main-text);
+    /* text-align: left; */
+}
+
+.center {
+    text-align: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -199,4 +245,99 @@ body {
         font-size: 6rem;
         margin-top: 1rem;
     }
+
+    .main__content h2 {
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+
+    .main__content h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+
+/* PROJECTS PAGE */
+
+.sidebar {
+    display: grid;
+    width: 100%;
+    /* padding: 20px; */
+    text-align: left;
+    margin: 0 auto;
+    height: 40vh;
+    /* z-index: 1; */
+    /* max-width: 1300px; */
+    padding: 0 50px;
+    margin-top: -150px;
+}
+
+.sidebar h3 {
+    font-size: 2rem;
+    color: var(--color-main-text);
+}
+
+.sidebar hr {
+    width: 100%;
+    size: 4px;
+    color: var(--color-main-text);
+    border: none;
+    border-top: 4px solid var(--color-main-text);
+    /* margin: 20px auto; */
+}
+
+.sidebar .project {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; */
+    text-align: left;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
+.project:hover h3 {
+    font-weight: bold;
+    color: var(--color-main-text);
+    transition: all 0.3s ease;
+}
+
+.sidebar .project h3.active {
+    font-weight: bold;
+    color: var(--color-main-text);
+}
+
+/* .sidebar .project__container {
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .project__container.active {
+    background-color: #777;
+    color: var(--color-main-text);
+} */
+
+.description {
+    display: none;
+    /* position: absolute; */
+    top: 0;
+    /* right: -150px; */
+    /* background-color: aqua; */
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: -200px;
+    color: var(--color-main-text);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.description.active {
+    display: block;
+}
+
+.description__content {
+    width: 70%;
+    margin-left: 100px;
+    margin-right: 0px;
 }
