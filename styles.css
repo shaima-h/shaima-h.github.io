@@ -12,7 +12,7 @@
 
 :root {
     --color-main-background: #c4bbbb;
-    --color-second-background: #c4bbbb;
+    --color-second-background: #ad9d9d;
     --color-main-text: #fff;
     --color-second-text: #fff;
     --color-hover-text: #948d8d;
@@ -23,7 +23,7 @@ body {
 }
 
 .navbar {
-    /* background: #131313; */
+    background: var(--color-second-background);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -32,6 +32,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar__container {
@@ -165,6 +166,7 @@ body {
     gap: 20px;
     padding: 20px;
     color: var(--color-main-text);
+    text-decoration: none;
 }
 
 .iconbox a {
@@ -176,7 +178,7 @@ body {
 }
 
 .iconbox a:hover {
-    color: var(--color-hover-text); /* Optional: Change color on hover */
+    color: var(--color-hover-text);
 }
 
 /* front page */
@@ -221,6 +223,12 @@ body {
     /* text-align: left; */
 }
 
+.main__content h4 {
+    font-size: 2rem;
+    color: var(--color-main-text);
+    /* text-align: left; */
+}
+
 .center {
     text-align: center;
 }
@@ -255,26 +263,47 @@ body {
         font-size: 2rem;
         margin-top: 1rem;
     }
+
+    .main__content h4 {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
 }
 
 /* PROJECTS PAGE */
+
+.projects__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto 50px auto;
+    height: 90vh;
+    background-color: var(--color-main-background);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    /* margin-bottom: 100px; */
+}
 
 .sidebar {
     display: grid;
     width: 100%;
     /* padding: 20px; */
     text-align: left;
-    margin: 0 auto;
-    height: 40vh;
+    /* margin: 0 auto; */
+    /* height: 40vh; */
     /* z-index: 1; */
     /* max-width: 1300px; */
     padding: 0 50px;
-    margin-top: -150px;
+    /* margin-top: -150px; */
 }
 
 .sidebar h3 {
     font-size: 2rem;
     color: var(--color-main-text);
+    margin-top: 10px;
 }
 
 .sidebar hr {
@@ -286,25 +315,25 @@ body {
     /* margin: 20px auto; */
 }
 
-.sidebar .project {
+.project {
     /* display: flex;
     justify-content: center;
     align-items: center;
     position: relative; */
-    text-align: left;
-    margin-left: 4rem;
+    text-align: center;
+    /* margin-left: 4rem; */
     margin-bottom: 1rem;
 }
 
-.project:hover h3 {
+.project:hover {
     font-weight: bold;
     color: var(--color-main-text);
     transition: all 0.3s ease;
 }
 
-.sidebar .project h3.active {
+.project.active {
     font-weight: bold;
-    color: var(--color-main-text);
+    /* color: var(--color-main-text); */
 }
 
 /* .sidebar .project__container {
@@ -325,10 +354,10 @@ body {
     /* background-color: aqua; */
     padding: 10px;
     border-radius: 5px;
-    width: 200px;
-    margin-top: -200px;
+    width: 100%;
+    /* margin-top: -200px; */
     color: var(--color-main-text);
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
 }
 
@@ -339,5 +368,39 @@ body {
 .description__content {
     width: 70%;
     margin-left: 100px;
-    margin-right: 0px;
+    /* margin-right: -400px; */
+}
+
+.description h3 {
+    font-size: 2rem;
+    color: var(--color-main-text);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.description h4 {
+    font-size: 1.5rem;
+    color: var(--color-main-text);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.description ul {
+    font-size: 2rem;
+    color: var(--color-main-text);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.description a {
+    font-size: 2rem;
+    color: var(--color-main-text);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.description a:hover {
+    color: var(--color-hover-text);
 }

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleDescription(element) {
         // Remove active class from all descriptions and project names
         const descriptions = document.querySelectorAll('.description');
-        const projectContainers = document.querySelectorAll('.project__container');
+        const projectContainers = document.querySelectorAll('.project');
 
         descriptions.forEach(description => {
             description.classList.remove('active');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add event listeners to project names
-    document.querySelectorAll('.project__container').forEach(projectContainer => {
+    document.querySelectorAll('.project').forEach(projectContainer => {
         projectContainer.addEventListener('click', function() {
             toggleDescription(this);
         });
