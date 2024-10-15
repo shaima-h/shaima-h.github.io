@@ -11,11 +11,11 @@
 }
 
 :root {
-    --color-main-background: #c4bbbb;
-    --color-second-background: #ad9d9d;
+    --color-main-background: #224048;
+    --color-second-background: #163031;
     --color-main-text: #fff;
     --color-second-text: #fff;
-    --color-hover-text: #948d8d;
+    --color-hover-text: #AE5E39;
 }
 
 body {
